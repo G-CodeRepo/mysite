@@ -7,29 +7,53 @@ photo
 <!-- sidebar -->
 @section('sidebar')
 <!-- this content will be injected into the blade template -->
-<ul>
-<li>Hawaii Islands</li>
+
+<!-- TODO: THESE LINKS WILL POINTS TO A PARTICULAR TABLE(S) IN DATABASE -->
+<div id="image_category">
+	<h1>CATEGORIES</h1>
 	<ul>
-	<li>Maui</li>
-	<li>Molokai</li>
-	<li>Oahu</li>
-	<li>Hawaii</li>
-	<li>Kauai</li>
-	<li>Lanai</li>
+	<li>Hawaii Islands
+		<ul>
+			<li>Maui</li>
+			<li>Molokai</li>
+			<li>Oahu</li>
+			<li>Hawaii</li>
+			<li>Kauai</li>
+			<li>Lanai</li>
+		</ul>
+	</li>
+	<li>Music
+		<ul>
+			<li>Artists/Bands</li>
+			<li>Guitars</li>
+			<li>Drums</li>
+			<li>Bass</li>
+			<li>Other</li>
+		</ul>
+	</li>
+	<li>Basketball
+		<ul>
+			<li>NBA</li>
+			<li>WNBA</li>
+		</ul>
+	</li>
+	<li>Cars</li>
+	<li>Artwork</li>
 	</ul>
-<li>Music
-	<ul>
-	<li>Artists/Bands</li>
-	<li>Guitars</li>
-	<li>Drums</li>
-	<li>Bass</li>
-	<li>Other</li>
-	</ul>
-</li>
-<li>Basketball</li>
-<li>Cars</li>
-<li>Artwork</li>
-<ul>	
+</div>
+
+<!-- search form to query database -->
+<div id="form">
+<form id="search_form" action="coming_soon.php" method="get"> <!-- TEMP ACTION-->
+	<fieldset>
+		<legend>Search Image</legend>
+		TEMP1:<input type="text" name="TEMP1" />
+		TEMP2:<input type="text" name="TEMP2" />
+		TEMP3:<input type="text" name="TEMP3" />
+		<input type="submit" value="Find" />
+	</fieldset>
+</form>
+</div>
 @endsection
 
 <!-- main content -->
@@ -37,6 +61,7 @@ photo
 <div><h1>Photos page</h1></div>
 
 <!-- thumbnails -->
+<!-- TODO: THESE TEST IMAGES WILL BE REPLACED BY IMAGES FROM THE DATABASE -->
 <div class="thumbnail" onmouseover="preview()">
 	<a class="pic" href="{{ asset('images/i1.jpg') }}">
 	<img src="{{ asset('images/i1.jpg') }}"/>
@@ -75,6 +100,11 @@ photo
 <div class="thumbnail">
 <a class="pic" href="http://www.guitarworld.com/files/Chapman_Joe_Satriani_0880-Photo-Credit-Chapman-Baehler.jpg">
 <img src="http://www.guitarworld.com/files/Chapman_Joe_Satriani_0880-Photo-Credit-Chapman-Baehler.jpg" />
+</a>
+</div>
+<div class="thumbnail">
+<a class="pic" href="http://acuraconnected.com/wp-content/uploads/2015/08/nsx_960_2015_08_14_03.jpg">
+<img src="http://acuraconnected.com/wp-content/uploads/2015/08/nsx_960_2015_08_14_03.jpg" />
 </a>
 </div>
 @endsection
