@@ -1,4 +1,4 @@
-@extends('layouts.template')
+@extends('layouts.master')
 <!-- site name -->
 @section('site_name')
 photo
@@ -11,31 +11,43 @@ photo
 <!-- TODO: THESE LINKS WILL POINTS TO A PARTICULAR TABLE(S) IN DATABASE -->
 <div id="image_category">
 	<h1>CATEGORIES</h1>
+
 	<ul>
-	<li>Hawaii Islands
-		<ul>
-			<li>Maui</li>
-			<li>Molokai</li>
-			<li>Oahu</li>
-			<li>Hawaii</li>
-			<li>Kauai</li>
-			<li>Lanai</li>
-		</ul>
+	<li>
+		<div class="dropdown">
+			<span>Hawaiian Islands</span>
+			<div class="dropdown-content">
+			<a href="{{ URL::to('/coming_soon') }}">Maui</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Molokai</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Oahu</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Hawaii</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Kauaii</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Lanai</a><br />
+			</div>
+		</div>
 	</li>
-	<li>Music
-		<ul>
-			<li>Artists/Bands</li>
-			<li>Guitars</li>
-			<li>Drums</li>
-			<li>Bass</li>
-			<li>Other</li>
-		</ul>
+	<li>
+		<div class="dropdown">
+			<span>Music</span>
+			<div class="dropdown-content">
+			<a href="{{ URL::to('/coming_soon') }}">Artists/Bands</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Guitars</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Drums</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Bass</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Other</a><br />
+			</div>
+		</div>
 	</li>
-	<li>Basketball
-		<ul>
-			<li>NBA</li>
-			<li>WNBA</li>
-		</ul>
+	<li>
+		<div class="dropdown">
+			<span>Basketball</span>
+			<div class="dropdown-content">
+			<a href="{{ URL::to('/coming_soon') }}">NBA</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">WNBA</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">NCAA</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Euro League</a><br />
+			</div>
+		</div>
 	</li>
 	<li>Cars</li>
 	<li>Artwork</li>
@@ -43,7 +55,7 @@ photo
 </div>
 
 <!-- search form to query database -->
-<div id="form">
+<div id="search_form">
 <form id="search_form" action="coming_soon.php" method="get"> <!-- TEMP ACTION-->
 	<fieldset>
 		<legend>Search Image</legend>
@@ -110,9 +122,11 @@ photo
 @endsection
 
 <!-- javascript for opacity and preview effect -->
+<!-- 
 @section('script')
 <script src="{{ asset('/external_libraries/Magnific-Popup-master/dist/jquery.magnific-popup.js') }}"></script>
-<script src="{{ asset('/javascript/preview_image.js') }}"></script>
+<script src="{{ asset('/js/per_page_js/preview_image.js') }}"></script>
 @endsection
+-->
 
 

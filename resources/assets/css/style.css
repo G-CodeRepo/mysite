@@ -11,6 +11,8 @@ body {
    	font: 				13px/15px Verdana, Arial, Helvetica, sans-serif;
    	background-color: 	#000000;	
 }
+
+/* side navigation */
 aside {
     background-color:	#5c8a8a;
 	float: 				left;
@@ -20,17 +22,23 @@ aside {
 aside ul {
 	list-style-type: 	none;
 }
+
+/* main contents */
 main {
 	background-color: 	#ffffff;
 	float: 				right;
 	height: 			100%;
-	width: 				85%;			
+	width: 				100%;			
 }
+
+/* footer */
 footer {
 	clear: 				both;
 	text-align: 		center;	
 	color: 				#ffffff;
-}			
+}
+
+/* top navigation */			
 nav ul {
     padding: 			0;
 }
@@ -52,6 +60,8 @@ nav li a:hover {
 nav li#login_logout {
 	float:right;
 }
+
+/* images */
 img {
 	border: 			none;
 }
@@ -68,6 +78,8 @@ div.thumbnail img {
 div.color_on img {
 	opacity: 			1.00;
 }
+
+/* main menu background */
 .background {
 	position: relative;
     height:				100%;
@@ -80,3 +92,44 @@ div.color_on img {
     overflow: 			hidden;
 	opacity: 			0.70;
 }
+
+/* drop down menu */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color:#f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

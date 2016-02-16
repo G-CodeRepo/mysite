@@ -1,9 +1,9 @@
 $(document).ready(function() {
-
 	// remove sidebar to show just the background image
+	/*
 	$("#side_menu").remove();
 	$("#main_content").css("width", "100%");
-
+	*/
 
 	// THESE ARE JUST TEMP VALUES FOR TESTING
 	var image = document.getElementById("background_img");

@@ -1,4 +1,4 @@
-@extends('layouts.template')
+@extends('layouts.master')
 <!-- site name -->
 @section('site_name')
 coming soon

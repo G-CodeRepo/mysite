@@ -7,15 +7,16 @@
 
         <!-- CSS And JavaScript -->
         <!-- CSS for http-->
-		<link href="{{{ asset('/css/style.css') }}}" rel="stylesheet" />   
+		<!-- <link href="{{{ asset('/css/style.css') }}}" rel="stylesheet" /> -->
+		<link href="{{ elixir('css/all.css') }}" rel="stylesheet"/>
 		<!-- css for secure https (NOT WORKING)
      	<link href="{{{ secure_asset('/css/style.css') }}}" rel="stylesheet">
     	-->
     	<!-- CSS for JQuery library-->
-		<link href="{{{  asset('/external_libraries/Magnific-Popup-master/dist/magnific-popup.css') }}}" rel="stylesheet" />
+		<link href="{{  asset('/external_libraries/Magnific-Popup-master/dist/magnific-popup.css') }}" rel="stylesheet" />
     	
     	<!--hosted jQuery from google-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
 		</script>
 	
     </head>
@@ -42,14 +43,15 @@
 			</ul>
 		</nav>
 		
-		<!-- sidebar -->
-    	<aside id="side_menu">
-    		@yield('sidebar')
-		</aside>
 
 		<!--main contents -->
 		<main id="main_content">
-        	<!--page content is injected here-->
+			<!-- sidebar -->
+			<aside id="side_menu">
+				@yield('sidebar')
+			</aside>
+
+
         	@yield('content')
 		</main>
 		
@@ -57,6 +59,9 @@
 		<footer>Copyright <?php echo date("Y", time()); ?> by G-Productions</footer>
 
 		<!-- javascript -->
+		<script type="text/javascript" src="{{ asset('/external_libraries/Magnific-Popup-master/dist/jquery.magnific-popup.js') }}"></script>
+		<script type="text/javascript" src="{{ elixir('js/all.js') }}"></script>
+		<!-- (optional) javascript specific to a page-->
 		@yield('script')
     </body>
 
