@@ -50,13 +50,13 @@ Route::group(['middleware' => ['web']], function () {
     */
 
 
-    // WEBSITE NAVIGATION
+    /************************************ MY SITE *********************************************************************/
     Route::get('/index', function () {
     	return view('index');			// option 2 back to home page
     });
 
-    Route::get('photo', function () {
-    	return view('photo');
+    Route::get('gallery', function () {
+    	return view('gallery');
     });
     Route::get('coming_soon', function () {
     	return view('coming_soon');
@@ -70,7 +70,11 @@ Route::group(['middleware' => ['web']], function () {
      	//return App\User::all();
      });
 
-     // CRUD TEST for 'tasks' table
+    /************************************ MY SITE *********************************************************************/
+
+
+
+    // CRUD TEST for 'tasks' table
     /**
      * Show Task Dashboard
      */
@@ -101,6 +105,7 @@ Route::group(['middleware' => ['web']], function () {
           }
      });
 
+    /************************************ TASK ************************************************************************/
 
      // USER TASKS
      /**
@@ -139,12 +144,12 @@ Route::group(['middleware' => ['web']], function () {
     });
     */
 
-  
-    /*
+
+
+    // HOME PAGE
     Route::get('/', function () {
         return view('welcome');
     })->middleware('guest');
-    */
 
 
     // TASK
@@ -156,6 +161,20 @@ Route::group(['middleware' => ['web']], function () {
     // AUTHENTICATION
     Route::auth();
     Route::get('/home', 'HomeController@index');
+
+    /************************************ TASK ************************************************************************/
+
+
+    /************************************ GALLERY *********************************************************************/
+    Route::get('/gallery/list', 'GalleryController@viewGalleryList');
+    Route::post('/gallery/save', 'GalleryController@saveGallery');
+    Route::get('/gallery/view/{id}', 'GalleryController@viewGalleryPics');
+    Route::post('/image/do-upload', 'GalleryController@doImageUpload');
+
+
+
+    /************************************ GALLERY *********************************************************************/
+
 
 });
 ?>

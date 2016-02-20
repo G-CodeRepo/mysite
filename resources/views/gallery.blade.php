@@ -1,7 +1,7 @@
 @extends('layouts.master')
 <!-- site name -->
 @section('site_name')
-photo
+photo gallery
 @endsection
 
 <!-- sidebar -->
@@ -49,28 +49,72 @@ photo
 			</div>
 		</div>
 	</li>
-	<li>Cars</li>
-	<li>Artwork</li>
+	<li>
+		<div class="dropdown">
+			<span>Cars</span>
+			<div class="dropdown-content">
+			<a href="{{ URL::to('/coming_soon') }}">American</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">European</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Asian</a><br />
+			</div>
+		</div>
+	</li>
+	<li>
+		<div class="dropdown">
+			<span>Artwork</span>
+			<div class="dropdown-content">
+			<a href="{{ URL::to('/coming_soon') }}">Anime</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Comics</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Video Games</a><br />
+			<a href="{{ URL::to('/coming_soon') }}">Other</a><br />
+			</div>
+		</div>
+	</li>
 	</ul>
 </div>
 
+<!-- add category form -->
+<!--
+<div class="row">
+	<div class="col-md-12">
+		List will be shown here
+	</div>
+
+	<div >
+		<form class="form" method="POST" action="{{ url('gallery/save') }}">
+			{{ csrf_field() }}
+
+			<fieldset>
+			<legend>Add Gallery</legend>
+				<div class="form-group">
+				<input class="form-control" type="text" name="gallery_name" id="gallery_name" placeholder="name of gallery"  />
+			</div>
+			<button class="btn btn-primary">Save</button>
+			</fieldset>
+		</form>
+	</div>
+</div>
+-->
+
+
 <!-- search form to query database -->
 <div id="search_form">
-<form id="search_form" action="coming_soon.php" method="get"> <!-- TEMP ACTION-->
-	<fieldset>
-		<legend>Search Image</legend>
-		TEMP1:<input type="text" name="TEMP1" />
-		TEMP2:<input type="text" name="TEMP2" />
-		TEMP3:<input type="text" name="TEMP3" />
-		<input type="submit" value="Find" />
-	</fieldset>
-</form>
+	<form class="form" action="{{ url('coming_soon.php') }}" method="get"> <!-- TEMP ACTION-->
+		{{ csrf_field() }}
+		<fieldset>
+			<legend>Search Image</legend>
+			TEMP1:<input type="text" name="TEMP1" />
+			TEMP2:<input type="text" name="TEMP2" />
+			TEMP3:<input type="text" name="TEMP3" />
+			<input type="submit" value="Find" />
+		</fieldset>
+	</form>
 </div>
 @endsection
 
 <!-- main content -->
 @section('content')
-<div><h1>Photos page</h1></div>
+<div><h1>Photo Gallery</h1></div>
 
 <!-- thumbnails -->
 <!-- TODO: THESE TEST IMAGES WILL BE REPLACED BY IMAGES FROM THE DATABASE -->
@@ -90,7 +134,7 @@ photo
 	</a>
 </div>
 <div class="thumbnail">
-	<a class="pic" href="images/i4.jpg">
+	<a class="pic" href="{{ asset('images/i4.jpg') }}">
 	<img src="{{ asset('images/i4.jpg') }}"/>
 	</a>
 </div>

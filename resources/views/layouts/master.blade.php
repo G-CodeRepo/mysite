@@ -7,10 +7,10 @@
 
         <!-- CSS And JavaScript -->
         <!-- CSS for http-->
-		<!-- <link href="{{{ asset('/css/style.css') }}}" rel="stylesheet" /> -->
+		<!-- <link href="{{ asset('/css/style.css') }}" rel="stylesheet" /> -->
 		<link href="{{ elixir('css/all.css') }}" rel="stylesheet"/>
 		<!-- css for secure https (NOT WORKING)
-     	<link href="{{{ secure_asset('/css/style.css') }}}" rel="stylesheet">
+     	<link href="{{ secure_asset('/css/style.css') }}" rel="stylesheet">
     	-->
     	<!-- CSS for JQuery library-->
 		<link href="{{  asset('/external_libraries/Magnific-Popup-master/dist/magnific-popup.css') }}" rel="stylesheet" />
@@ -27,7 +27,7 @@
 			<ul>
 			<li><a href="{{ URL::to('/index') }}">Home</a></li>
 			<li><a href="{{ URL::to('/coming_soon') }}">CS Projects</a></li>
-			<li><a href="{{ URL::to('/photo') }}">Photos</a></li>
+			<li><a href="{{ URL::to('/gallery') }}">Gallery</a></li>
 			<li><a href="{{ URL::to('/coming_soon') }}">Hobbies</a></li>
 			<li><a href="{{ URL::to('/coming_soon') }}">Links</a></li>
 			<li><a href="{{ URL::to('/coming_soon') }}">Disclaimer</a></li>

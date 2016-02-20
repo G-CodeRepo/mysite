@@ -27,7 +27,7 @@
 			<ul>
 			<li><a href="{{ URL::to('/index') }}">Home</a></li>
 			<li><a href="{{ URL::to('/coming_soon') }}">CS Projects</a></li>
-			<li><a href="{{ URL::to('/photo') }}">Photos</a></li>
+			<li><a href="{{ URL::to('/gallery') }}">Gallery</a></li>
 			<li><a href="{{ URL::to('/coming_soon') }}">Hobbies</a></li>
 			<li><a href="{{ URL::to('/coming_soon') }}">Links</a></li>
 			<li><a href="{{ URL::to('/coming_soon') }}">Disclaimer</a></li>
