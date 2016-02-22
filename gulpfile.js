@@ -16,16 +16,12 @@ elixir(function(mix) {
 
 	// these css and js files are for my website project
 	mix.styles([
-		'style.css',
-		'bootstrap-material-design.css',
-		'ripples.css',
+		'style.css'
 	], 'public/css/all.css'); // path is required for some reason for bug fix
 
 	mix.scripts([
 		'background_images.js',
-		'preview_image.js',
-		'material.js',
-		'ripples.js'
+		'preview_image.js'
 	], 'public/js/all.js'); // path is required for some reason for bug fix
 
     mix.version(['css/all.css', 'js/all.js']);

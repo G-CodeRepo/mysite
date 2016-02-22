@@ -161,6 +161,10 @@ Route::group(['middleware' => ['web']], function () {
     // AUTHENTICATION
     Route::auth();
     Route::get('/home', 'HomeController@index');
+    Route::get('/logout', function() {
+        Auth::logout();
+        return redirect('/index');
+    });
 
     /************************************ TASK ************************************************************************/
 

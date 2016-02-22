@@ -24,10 +24,18 @@
     <body>
     	<!--top navigation-->
 		<nav>
-			<ul>
+			<ul id="nav">
 			<li><a href="{{ URL::to('/index') }}">Home</a></li>
 			<li><a href="{{ URL::to('/coming_soon') }}">CS Projects</a></li>
-			<li><a href="{{ URL::to('/gallery') }}">Gallery</a></li>
+			<li><a href="{{ URL::to('/gallery') }}">Gallery</a>
+				<ul>
+					<li><a href="{{ URL::to('/coming_soon') }}">Hawaii Islands</a></li>
+					<li><a href="{{ URL::to('/coming_soon') }}">Music</a></li>
+					<li><a href="{{ URL::to('/coming_soon') }}">Basketball</a></li>
+					<li><a href="{{ URL::to('/coming_soon') }}">Cars</a></li>
+					<li><a href="{{ URL::to('/coming_soon') }}">Artwork</a></li>
+				</ul>
+			</li>
 			<li><a href="{{ URL::to('/coming_soon') }}">Hobbies</a></li>
 			<li><a href="{{ URL::to('/coming_soon') }}">Links</a></li>
 			<li><a href="{{ URL::to('/coming_soon') }}">Disclaimer</a></li>

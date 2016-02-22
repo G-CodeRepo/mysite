@@ -103,9 +103,8 @@ photo gallery
 		{{ csrf_field() }}
 		<fieldset>
 			<legend>Search Image</legend>
-			TEMP1:<input type="text" name="TEMP1" />
-			TEMP2:<input type="text" name="TEMP2" />
-			TEMP3:<input type="text" name="TEMP3" />
+			Name:<input type="text" name="name" />
+			Type:<input type="text" name="type" />
 			<input type="submit" value="Find" />
 		</fieldset>
 	</form>
