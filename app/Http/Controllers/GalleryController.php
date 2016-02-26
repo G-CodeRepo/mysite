@@ -6,6 +6,10 @@ use App\Gallery;                            // required to use the 'Gallery' mod
 use Illuminate\Support\Facades\Validator;   // required to use the 'Validator' object
 class GalleryController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');          // allow only users that are logged in
+    }
+
     /**
      * view the list of galleries (not the pics)
      */

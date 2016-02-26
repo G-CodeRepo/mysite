@@ -10,8 +10,8 @@ photo gallery
 
 <!-- TODO: THESE LINKS WILL POINTS TO A PARTICULAR TABLE(S) IN DATABASE -->
 <div id="image_category">
-	<h1>CATEGORIES</h1>
-
+	<h1>Photo Gallery</h1>
+	<!--
 	<ul>
 	<li>
 		<div class="dropdown">
@@ -71,6 +71,51 @@ photo gallery
 		</div>
 	</li>
 	</ul>
+	-->
+
+
+	<!-- filter/search form to query database -->
+	<div id="filter_search_form">
+		<form class="form" id="filter_form" action="{{ url('coming_soon.php') }}" method="get"> <!-- TEMP ACTION-->
+			{{ csrf_field() }}
+			<fieldset>
+				<legend>Filter Image</legend>
+				<div><p>Category</p>
+					<select name="category_select" form="filter_form">
+						<option>All</option>
+						<option>Hawaii</option>
+						<option>Music</option>
+						<option>Cars</option>
+						<option>Basketball</option>
+						<option>Art</option>
+					</select>
+				</div>
+				<div><p>Subcategory</p>
+					<select name="subcategory_select" form="filter_form">
+						<option>All</option>
+						<option>Hawaii</option>
+						<option>Music</option>
+						<option>Cars</option>
+						<option>Basketball</option>
+						<option>Art</option>
+					</select>
+				</div>
+				<div><p>Date Added</p>
+					<select name="date_added_select" form="filter_form">
+						<option>All</option>
+						<option>Hawaii</option>
+						<option>Music</option>
+						<option>Cars</option>
+						<option>Basketball</option>
+						<option>Art</option>
+					</select>
+				</div>
+				<div>
+					<input type="submit" value="Filter" />
+				</div>
+			</fieldset>
+		</form>
+	</div>
 </div>
 
 <!-- add category form -->
@@ -96,25 +141,11 @@ photo gallery
 </div>
 -->
 
-
-<!-- search form to query database -->
-<div id="search_form">
-	<form class="form" action="{{ url('coming_soon.php') }}" method="get"> <!-- TEMP ACTION-->
-		{{ csrf_field() }}
-		<fieldset>
-			<legend>Search Image</legend>
-			Name:<input type="text" name="name" />
-			Type:<input type="text" name="type" />
-			<input type="submit" value="Find" />
-		</fieldset>
-	</form>
-</div>
 @endsection
 
 <!-- main content -->
 @section('content')
-<div><h1>Photo Gallery</h1></div>
-
+<div><h1></h1></div>
 <!-- thumbnails -->
 <!-- TODO: THESE TEST IMAGES WILL BE REPLACED BY IMAGES FROM THE DATABASE -->
 <div class="thumbnail" onmouseover="preview()">
